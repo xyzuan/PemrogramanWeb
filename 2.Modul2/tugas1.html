@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jody Yuantoro | Modul 1 - Codelab Kegiatan 1</title>
+  </head>
+  <body>
+    <h1>PENJUMLAHAN BILANGAN</h1>
+    <form style="display: flex; flex-direction: row">
+      <label for="firstNum">Bilangan Pertama: </label>
+      <input type="text" id="firstNum" name="firstNum" /><br /><br />
+      <label for="secondNum">Bilangan Kedua: </label>
+      <input type="text" id="secondNum" name="secondNum" /><br /><br />
+    </form>
+    <button id="submit">Jumlahkan</button>
+    <button id="reset">Ulang</button>
+  </body>
+  <script>
+    const firstNum = document.getElementById("firstNum");
+    const secondNum = document.getElementById("secondNum");
+    const submitBtn = document.getElementById("submit");
+    const resetBtn = document.getElementById("reset");
+
+    submitBtn.addEventListener("click", () => {
+      const firstValue = parseFloat(firstNum.value) || 0;
+      const secondValue = parseFloat(secondNum.value) || 0;
+
+      alert(`Hasil penjumlahan: ${firstValue + secondValue}`);
+    });
+
+    resetBtn.addEventListener("click", () => {
+      firstNum.value = 0;
+      secondNum.value = 0;
+    });
+  </script>
+</html>
